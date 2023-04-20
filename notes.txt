@@ -1,0 +1,66 @@
+From Playground: https://countries.trevorblades.com/
+Repo: https://github.com/trevorblades/countries
+
+input UserInput {
+  id: ID 
+  name: String
+}
+
+type Query {
+  users: [User]
+  user(input: UserInput): User
+}
+
+type User {
+  id: ID!
+  name: String!
+  age: Int!
+  height: Float!
+  isMarried: Boolean
+  friends: [User!]
+  videosPosted: [Video!]
+}
+
+type Video {
+  id: ID!
+  title: String!
+  description: String!
+}
+
+# Querying info using GraphQL
+
+{
+  country(code: "US") {
+    code 
+    name 
+    phone 
+    capital
+    currency
+    continent {
+      code 
+      name
+      countries {
+        name
+        capital
+      }
+    }
+  }
+}
+
+# Querying languages 
+{
+  languages {
+    code 
+    name 
+    native 
+    rtl
+  }
+}
+
+{
+  country (code: "RW") {
+    name
+    capital 
+    currency
+  }
+}
