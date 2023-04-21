@@ -64,3 +64,18 @@ type Video {
     currency
   }
 }
+
+Building GraphQL API:
+
+- JavaScript
+- NodeJS
+- Apollo Server Library: one of the most famous GraphQL libraries out there to create your GraphQL API. It has a really good community
+
+
+In the terminal: initialize a new Nodejs project like so:
+$ npm init (place enter to all the questions) to get a package.json file
+$ npm install apollo-server graphql (install Apollo library which will allow us to make our API into an API that serves GraphQL) Also need to install graphql core package because it is needed in order to write actual GraphQL language. 
+$ npm install nodemon (to remove the need to keep restarting our server every time a change is made)
+
+Add the following to package.json:
+scripts: { “start”: “nodemon index.js”}  => npm start will then run nodemon into our packages
