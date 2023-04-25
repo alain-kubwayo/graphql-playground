@@ -79,3 +79,8 @@ $ npm install nodemon (to remove the need to keep restarting our server every ti
 
 Add the following to package.json:
 scripts: { “start”: “nodemon index.js”}  => npm start will then run nodemon into our packages
+
+
+Inside the index.js:
+// typeDefs contains all the types we define.
+// resolvers are simply functions that deal with the data. E.g. make a database call to insert data into a database, etc.
