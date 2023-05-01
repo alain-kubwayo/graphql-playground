@@ -97,3 +97,18 @@ Const typeDefs = gql`
 Install Apollo GraphQL extension to get some code syntax highlighting for the code we write in the back ticks. 
 
 // resolvers are simply functions that deal with the data. E.g. make a database call to insert data into a database, etc.
+
+It's standard to have enums defined as capital letters. Make sure the data is also in capital letters.
+
+enum Nationality {
+  RWANDA
+  FRANCE
+  GHANA
+}
+
+type User {
+  nationality: Nationality!
+}
+
+id should be either a string or a number
+const user = _.find(UserList, { id: Number(id) })

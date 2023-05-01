@@ -11,6 +11,7 @@ const resolvers = {
         },
         user: (parent, args) => {
             const id = args.id;
+            // if you're using a database, you can use this id to select a specific user from the database table using this specific id
             const user = _.find(UserList, { id: Number(id) });
             return user;
         }
