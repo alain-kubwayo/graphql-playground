@@ -22,7 +22,7 @@ const typeDefs = gql`
         users: [User!]!
         user(id: ID!): User
         movies: [Movie!]!
-        movie(name: String!): Movie
+        movie(name: String!): Movie!
     }
 
     input CreateUserInput {
