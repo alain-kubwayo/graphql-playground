@@ -26,6 +26,12 @@ const resolvers = {
             const movie = _.find(MovieList, { name });
             return movie;
         }
+    },
+    User: {
+        // you can have a separate table inside of your db related to movies, what you can do is, inside of the users table you can include a field called favoriteMovies and just a list of IDs and you can use that to query data from the other table and return it over here. So, whenever you have a field inside of a type that doesn't return a basic type, you can actually add resolvers to that field to that type and specify what that field will return. 
+        favoriteMovies: () => {
+            return _.filter(MovieList, (movie) => movie.yearOfPublication >= 2000 && movie.yearOfPublication <= 2010 )
+        }
     }
 };
 
