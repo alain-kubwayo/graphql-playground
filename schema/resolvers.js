@@ -6,6 +6,7 @@ const _ = require("lodash");
 const resolvers = {
     Query: {
         users: () => {
+            // make an API call to the database to get data about users and return the users
             return UserList;
         },
         user: (parent, args) => {

@@ -83,4 +83,17 @@ scripts: { “start”: “nodemon index.js”}  => npm start will then run node
 
 Inside the index.js:
 // typeDefs contains all the types we define.
+schema => type-defs.js
+const { gql } = require(‘Apollo-server’);
+
+
+Const typeDefs = gql`
+	type Query {
+		users 
+		friends
+	}
+`
+
+Install Apollo GraphQL extension to get some code syntax highlighting for the code we write in the back ticks. 
+
 // resolvers are simply functions that deal with the data. E.g. make a database call to insert data into a database, etc.
