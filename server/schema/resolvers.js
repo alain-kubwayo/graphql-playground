@@ -16,7 +16,7 @@ const resolvers = {
             // console.log(info);
             return UserList;
         },
-        user: (parent) => {
+        user: (parent, args) => {
             const id = args.id;
             // if you're using a database, you can use this id to select a specific user from the database table using this specific id
             const user = _.find(UserList, { id: Number(id) });
@@ -71,7 +71,7 @@ const resolvers = {
             _.remove(UserList, (user) => user.id === Number(id));
             return null;
         }
-    }
+    },
 };
 
 module.exports = { resolvers };
