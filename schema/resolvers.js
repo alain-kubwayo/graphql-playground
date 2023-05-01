@@ -1,6 +1,7 @@
 const { UserList } = require("../FakeData");
 const _ = require("lodash");
 
+// all the functions that make calls to the database, decide what we return to the frontend, do something in our API will exist in the resolvers object.
 
 const resolvers = {
     Query: {
